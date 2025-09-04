@@ -1,0 +1,107 @@
+:root {
+    --bg: #0f1220;
+    --panel: #151933;
+    --panel-2: #10142b;
+    --text: #e9eef7;
+    --muted: #93a0ba;
+    --primary: #4f7cff;
+    --primary-2: #7aa3ff;
+    --accent: #00d1b2;
+    --danger: #ff6b6b;
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+    --radius: 20px;
+  }
+  
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    background: radial-gradient(1200px 800px at 80% 10%, #1c2247 0%, var(--bg) 45%, #0b0d19 100%);
+    color: var(--text);
+    display: grid;
+    place-items: center;
+    padding: 24px;
+  }
+  
+  .calc {
+    width: min(420px, 95vw);
+    background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.06);
+  }
+  
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: rgba(255,255,255,.02);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .brand { font-weight: 600; letter-spacing: .3px; color: var(--muted); }
+  .toggles { display: flex; gap: 10px; align-items: center; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 10px; border-radius: 999px; font-size: 12px; color: var(--muted);
+    background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.06);
+    cursor: pointer; user-select: none;
+  }
+  .chip input { appearance: none; width: 14px; height: 14px; border-radius: 3px; border: 1px solid rgba(255,255,255,.35); display: grid; place-items: center; }
+  .chip input:checked { background: var(--primary); border-color: var(--primary); }
+  
+  .display {
+    padding: 22px 18px 8px 18px;
+    min-height: 120px;
+    display: grid;
+    gap: 10px;
+    background: radial-gradient(600px 260px at 30% 0%, rgba(79,124,255,.12), transparent 60%);
+  }
+  .expr {
+    font-size: 14px; min-height: 20px; color: var(--muted);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .result {
+    font-variant-numeric: tabular-nums; text-align: right;
+    font-size: clamp(28px, 7vw, 40px);
+    line-height: 1.2;
+    word-break: break-all;
+  }
+  
+  .keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 14px;
+  }
+  .btn {
+    border: none; cursor: pointer; border-radius: 14px; padding: 16px 12px;
+    background: #1a1f3e; color: var(--text); font-size: 18px; font-weight: 600;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,.25), 0 4px 12px rgba(0,0,0,.20);
+    transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
+    user-select: none;
+  }
+  .btn:active { transform: translateY(1px); box-shadow: inset 0 -1px 0 rgba(0,0,0,.25), 0 3px 8px rgba(0,0,0,.18); }
+  .btn.op { background: #1e254a; }
+  .btn.equals { background: linear-gradient(180deg, var(--primary) 0%, var(--primary-2) 100%); color: #04122e; }
+  .btn.ac { background: linear-gradient(180deg, var(--danger), #e85a5a); }
+  .btn.util { background: #1a2242; }
+  .btn.zero { grid-column: span 2; }
+  
+  .footer {
+    padding: 4px 14px 14px; color: var(--muted); font-size: 12px; display: flex; justify-content: space-between; align-items: center;
+  }
+  .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background: rgba(255,255,255,.06); padding: 2px 6px; border-radius: 6px; }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f3f6ff; --panel: #ffffff; --panel-2: #f3f6ff; --text: #0c1024; --muted: #6b7280;
+      --shadow: 0 10px 35px rgba(31, 63, 125, .15);
+    }
+    .btn { background: #edf1ff; color: #11172d; box-shadow: inset 0 -2px 0 rgba(0,0,0,.05), 0 4px 10px rgba(67,105,176,.18) }
+    .btn.op { background: #e7ecff; }
+    .btn.util { background: #e9efff; }
+  }
+  
