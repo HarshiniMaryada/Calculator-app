@@ -3,7 +3,7 @@
 A modern, responsive **calculator web app** built with **HTML, CSS, and JavaScript**.  
 Designed with accessibility, keyboard support, and a clean UI in mind.  
 
- **[Live Demo](https://<your-username>.github.io/calculator-app/)** 
+ **[Live Demo](https://harshinimaryada.github.io/Calculator-app/)** 
 
 ---
 
@@ -20,7 +20,7 @@ Designed with accessibility, keyboard support, and a clean UI in mind.
 
 ## Screenshot
 <p align="center">
-  <img src="assets/screenshot.png" alt="Calculator Screenshot" width="400"/>
+  <img src="assetsscreenshot.png" alt="Calculator Screenshot" width="400"/>
 </p>
 
 ---
@@ -33,5 +33,5 @@ Designed with accessibility, keyboard support, and a clean UI in mind.
 ---
 
 ## Deployment
-Deployed using **GitHub Pages**:
+Deployed using **GitHub Pages**
 
